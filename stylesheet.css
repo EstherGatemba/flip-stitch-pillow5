@@ -98,7 +98,7 @@ a{
 /*Styles for navigation*/
 .nav {
   font-family: 'Raleway',sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   font-style: normal;
   padding-top: 65px;
   padding-right: 45px;
@@ -128,6 +128,7 @@ a{
   font-family: 'Raleway',sans-serif;
   font-weight: 200;
   padding-left: 90px;
+  font-size: 1em;
 
 }
 /*All images on homepage are laid out here*/
