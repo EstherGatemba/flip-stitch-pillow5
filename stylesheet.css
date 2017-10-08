@@ -8,27 +8,28 @@ a{
   text-decoration: none;
   color: inherit;
 }
-/*separation between the header and the body*/
-.line{
-  height: 3px;
-  clear:both;
-  width:100%;
-  background-color: #d9d9d9;
-}
+
 /*add to cart button*/
 .addcart{
-    font-family: 'Raleway',sans-serif;
-    font-size: 1.5em;
-    font-style: normal;
-    text: white;
-    padding-top: 25px;
-    padding-right: 15px;
-    text-align: center;
-    border-radius: 5px;
-    height: 30px;
-    line-height: 10px;
-    background-color: #B92808;
-    color: white;
+  font-family: 'Raleway',sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  text: white;
+  padding-top: 8px;
+  padding-right: 5px;
+  text-align: center;
+  border-radius: 5px;
+  height: 15px;
+  width: 100px;
+  line-height: 10px;
+  background-color: #B92808;
+  color: white;
+  margin-right: 40px
+}
+
+/*place special request on order for purchase*/
+.request{
+  padding:6px;
 }
 /*contains the logo, navigation and cart image*/
 .header{
@@ -36,6 +37,7 @@ a{
   grid-template-columns: 1fr 4fr 1fr;
   flex: 1 100%;
   text-align: left;
+  border-bottom: 1px solid #d9d9d9;
 }
 /*static state of navigation buttons and buttons' change on hover*/
 .buttona{
@@ -103,8 +105,6 @@ a{
   font-size: 1.5em;
   font-style: normal;
   padding-top: 65px;
-  padding-right: 45px;
-  padding-bottom:0;
   text-align: center;
 }
 
@@ -114,14 +114,26 @@ a{
   grid-template-columns: 1fr 4fr;
   grid-column-gap:30px;
   width: 100%;
+  padding-top: 20px;
 }
 /*container that holds the index and product detail image and contents*/
-#mainpage-3 {
+.homepage {
   display:grid;
   grid-template-columns: 1fr 4fr 2fr;
   grid-column-gap:30px;
   width: 100%;
+  padding-top: 10px;
 }
+
+.homepage2 {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap:50px;
+  width: 100%;
+  padding-top: 20px;
+}
+
 /*List of options to mark that would filter the products*/
 #sidenav{
   height:100px;
@@ -141,8 +153,7 @@ a{
   padding-right:20px;
   grid-row-gap:20px;
   grid-column-gap: 20px;
-  border-top:1px solid #d9d9d9;
-  padding-top:50px;
+  padding-top:40px;
 }
 /*Style for the text content in the homepage and the product detail page*/
 .paragraph{
@@ -168,9 +179,59 @@ p{
 }
 
 /*end of page */
-.footer{
-display: block;
-padding-top: 100px;
-background-color: red;
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 5fr;
+  flex: 1 100%;
+  height: 30px;
+  width:90%;
+  padding-top: 100px;
+  padding-right: 10px;
+  text-align: right;
+  opacity:1;
 }
-ß
+
+.footer1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 5fr;
+  flex: 1 100%;
+  height: 30px;
+  width:110%;
+  padding-top: 100px;
+  padding-right: 50px;
+  text-align: right;
+  opacity:1;
+}
+
+.footercontent{
+  font-family: 'Raleway', sans-serif;
+  text-align: right;
+  display: grid;
+  grid-template-columns: 6fr;
+  padding-left: 60px;
+  width:100%;
+}
+
+.footercontent1{
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 4fr;
+  padding-left: 100px;
+  width:100%;
+}
+
+.footercontent2{
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 4fr;
+  padding-left: 100px;
+  width:100%;
+}
+
+.socialmedia{
+  border-right-width: 20px;
+  padding-top: 10px;
+}
+/*footer text*/
