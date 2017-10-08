@@ -7,20 +7,26 @@ a{
   color: inherit;
 }
 
-/*.container{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}*/
-
 .line{
   height: 3px;
   clear:both;
   width:100%;
   background-color: #d9d9d9;
 }
-.cart{
 
+.addcart{
+    font-family: 'Raleway',sans-serif;
+    font-size: 1.5em;
+    font-style: normal;
+    text: white;
+    padding-top: 25px;
+    padding-right: 15px;
+    text-align: center;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 10px;
+    background-color: #B92808;
+    color: white;
 }
 /*contains the logo, navigation and cart image*/
 .header{
@@ -75,6 +81,14 @@ a{
   opacity: 1;
 }
 
+.buttone{
+  background-color:red;
+}
+.button5:hover {
+  padding-right: 3px;
+  background-color:#d9d9d9;
+  opacity: 1;
+}
 .button::after{
   opacity: 2;
   right: 0;
@@ -90,21 +104,19 @@ a{
   padding-right: 45px;
   padding-bottom:0;
   text-align: center;
-
-}
-
-article{
-
-}
-
-aside{
-
 }
 
 /*container that has images and the side navigation for selection*/
 #mainpage {
   display:grid;
   grid-template-columns: 1fr 4fr;
+  grid-column-gap:30px;
+  width: 100%;
+}
+
+#mainpage-3 {
+  display:grid;
+  grid-template-columns: 1fr 4fr 2fr;
   grid-column-gap:30px;
   width: 100%;
 }
@@ -116,7 +128,6 @@ aside{
   font-family: 'Raleway',sans-serif;
   font-weight: 200;
   padding-left: 90px;
-
 
 }
 /*All images on homepage are laid out here*/
@@ -131,11 +142,19 @@ aside{
   padding-top:50px;
 }
 
+.paragraph{
+  display:grid;
+  grid-template-columns: 1fr 4fr ;
+  grid-auto-rows: 50px;
+  padding-right:20px;
+  line-height: 110%
+  grid-column-gap: 20px;
+  padding-top:50px;
+}
 
 .pillow-image {
   width:100%;
   height:100%;
-  background-color:red;
 }
 
 p{
@@ -147,8 +166,9 @@ p{
 
 
 .footer{
-border-top: 2px solid #d9d9d9;
-
+display: block;
+padding-top: 100px;
+background-color: red;
 }
 /*
 .pillow-image{
