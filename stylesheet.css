@@ -1,3 +1,5 @@
+
+/*Font specifications for the site*/
 .body, h1, h2, h3,h4, h5, h6{
   font-family: "Raleway", sans-serif;
 }
@@ -6,14 +8,14 @@ a{
   text-decoration: none;
   color: inherit;
 }
-
+/*separation between the header and the body*/
 .line{
   height: 3px;
   clear:both;
   width:100%;
   background-color: #d9d9d9;
 }
-
+/*add to cart button*/
 .addcart{
     font-family: 'Raleway',sans-serif;
     font-size: 1.5em;
@@ -35,7 +37,7 @@ a{
   flex: 1 100%;
   text-align: left;
 }
-/*static buttons and buttons' change on hover*/
+/*static state of navigation buttons and buttons' change on hover*/
 .buttona{
   background-color:white;
   padding: 3px 10px;
@@ -113,14 +115,14 @@ a{
   grid-column-gap:30px;
   width: 100%;
 }
-
+/*container that holds the index and product detail image and contents*/
 #mainpage-3 {
   display:grid;
   grid-template-columns: 1fr 4fr 2fr;
   grid-column-gap:30px;
   width: 100%;
 }
-
+/*List of options to mark that would filter the products*/
 #sidenav{
   height:100px;
   text-align: left;
@@ -131,7 +133,7 @@ a{
   font-size: 1em;
 
 }
-/*All images on homepage are laid out here*/
+/*All product images on homepage are laid out here*/
 .products{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -142,7 +144,7 @@ a{
   border-top:1px solid #d9d9d9;
   padding-top:50px;
 }
-
+/*Style for the text content in the homepage and the product detail page*/
 .paragraph{
   display:grid;
   grid-template-columns: 1fr 4fr ;
@@ -152,12 +154,12 @@ a{
   grid-column-gap: 20px;
   padding-top:50px;
 }
-
+/*image style for products*/
 .pillow-image {
   width:100%;
   height:100%;
 }
-
+/*styles for the text on site*/
 p{
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
@@ -165,23 +167,10 @@ p{
   font-kerning: auto;
 }
 
-
+/*end of page */
 .footer{
 display: block;
 padding-top: 100px;
 background-color: red;
 }
-/*
-.pillow-image{
-  float: left;
-  width: 33.33%;
-  height: auto;
-  box-sizing: border-box;
-  padding: 15px;
-}
-@media all and (min-width;768;px) {
-  .nav{order: 2;}
-  .sidenav{order: 1;}
-  .header{order: 3;}
-  .products{order: 4;}
-}*/
+ß
