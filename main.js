@@ -1,99 +1,12 @@
 /*** Object Constructors ***/
 function bear-long(name) {
-  this.price = price;
-  this.art = "images/bear-long.jpg";
-  this.size = "long";
-}
-
-function bear(name) {
-  this.price = price;
-  this.art = "images/bear.jpg";
-  this.size = "bear";
-}
-
-function bear2-square(name) {
-  this.price = price;
-  this.art = "images/bear2-square.jpg";
-  this.size = "square";
-}
-
-function bunny-long(name) {
-  this.price = price;
-  this.art = "images/bunny-long.jpg";
-  this.size = "bunny-long";
-}
-
-function bunny-round(name) {
-  this.price = price;
-  this.art = "images/bunny-round.jpg";
-  this.size = "bunny-round";
-  this,color = ;
-}
-
-function bunny-square(name) {
-  this.price = price;
-  this.art = "images/bunny-square.jpg";
-  this.size = "bunny-square";
-  this,color = ;
+  this.name=name;
+  this.price=price;
+  this.art=art;
+  this.size=size;
 
 }
 
-function bunny2-square(name) {
-  this.price = price;
-  this.art = "images/bunny2-square.jpg";
-  this.size = "bunny2-square";
-  this,color = ;
-}
-
-function dog-long(name) {
-  this.price = price;
-  this.art = "images/dog-long.jpg";
-  this.size = "dog-long";
-  this,color = ;
-}
-
-function dog-round(name) {
-  this.price = price;
-  this.art = "images/dog-round.jpg";
-  this.size = "dog-round";
-  this,color = ;
-}
-
-function dog-square(name) {
-  this.price = price;
-  this.art = "images/dog-square.jpg";
-  this.size = "dog-square";
-  this,color = ;
-}
-
-function dog2-square(name) {
-  this.price = price;
-  this.art = "images/dog2-square.jpg";
-  this.size = "dog2-square";
-  this,color = ;
-}
-
-/*Update the cart with the items added to the cart
-* quantity in number
-*/
-
-/*Update the cart with the items added to it
-* item and information on items
-*save this information so customer can continue shopping with items still in cart*/
-
-/*Add more items to cart*/
-
-
-/*change the size of the item with checkbox*/
-
-
-/*change the artwork but not size with checkbox*/
-
-
-/*update the price with change of item*/
-
-
-/**/
 
 /*Global variables*/
 var pillows = [new bear(), new Dog(), new bunny()];
@@ -102,7 +15,11 @@ var colors = ["AquaWhite", "GreenBeige", "RedBlue"]
 
 /*Document load function*/
 $(document).ready(function(){
-
   $("#displayimage").attr("src","images/bear-long.jpg");
   console.log("page has loaded");
+
+  $(".offer").on("click", function () {
+      var $checkbox = $(this).find(':checkbox');
+      $checkbox.attr('checked', !$checkbox.attr('checked'));
+      console.log("checkbox checked")
 });
