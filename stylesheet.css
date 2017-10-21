@@ -11,12 +11,9 @@ a{
 
 /*add to cart button*/
 .addcart{
+  display: grid;
   font-family: 'Raleway',sans-serif;
-  font-size: 1em;
-  font-style: normal;
-  text: white;
   padding-top: 8px;
-  padding-right: 5px;
   text-align: center;
   border-radius: 5px;
   height: 15px;
@@ -24,8 +21,9 @@ a{
   line-height: 10px;
   background-color: #B92808;
   color: white;
-  margin-right: 40px
+
 }
+
 
 /*place special request on order for purchase*/
 .request{
@@ -38,6 +36,7 @@ a{
   flex: 1 100%;
   text-align: left;
   border-bottom: 1px solid #d9d9d9;
+  padding-left: 30px;
 }
 /*static state of navigation buttons and buttons' change on hover*/
 .buttona{
@@ -106,6 +105,7 @@ a{
   font-style: normal;
   padding-top: 65px;
   text-align: center;
+
 }
 
 /*container that has images and the side navigation for selection*/
@@ -123,15 +123,28 @@ a{
   grid-column-gap:30px;
   width: 100%;
   padding-top: 10px;
+  padding-left: 30px;
 }
 
 .homepage2 {
   display:grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-column-gap:50px;
   width: 100%;
   padding-top: 20px;
+  padding-left: 30px;
+}
+
+.homepage3{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap:50px;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 30px;
+  background: red;
 }
 
 /*List of options to mark that would filter the products*/
@@ -143,7 +156,6 @@ a{
   font-weight: 200;
   padding-left: 90px;
   font-size: 1em;
-
 }
 /*All product images on homepage are laid out here*/
 .products{
