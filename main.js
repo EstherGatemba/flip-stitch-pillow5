@@ -73,13 +73,36 @@ function dog2-square(name) {
   this,color = ;
 }
 
+/*Update the cart with the items added to the cart
+* quantity in number
+*/
+
+/*Update the cart with the items added to it
+* item and information on items
+*save this information so customer can continue shopping with items still in cart*/
+
+/*Add more items to cart*/
+
+
+/*change the size of the item with checkbox*/
+
+
+/*change the artwork but not size with checkbox*/
+
+
+/*update the price with change of item*/
+
+
+/**/
+
 /*Global variables*/
 var pillows = [new bear(), new Dog(), new bunny()];
 var names = ["bear-long", "bear", "bear2-square", "bunny", "bunny2-square", "bunny-round", "bunny-long", "dog", "dog2-square", "dog"];
 var colors = ["AquaWhite", "GreenBeige", "RedBlue"]
 
-
+/*Document load function*/
 $(document).ready(function(){
+
   $("#displayimage").attr("src","images/bear-long.jpg");
   console.log("page has loaded");
 });

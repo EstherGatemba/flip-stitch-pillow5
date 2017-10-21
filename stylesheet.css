@@ -9,6 +9,18 @@ a{
   color: inherit;
 }
 
+/*shopping cart related css
+*All content in the cart page*/
+#mainpage-3 {
+  /*display: grid;*/
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  margin-top: 30px;
+
+}
+
 /*add to cart button*/
 .addcart{
   display: grid;
@@ -23,11 +35,23 @@ a{
   color: white;
 
 }
+/*product images in cart*/
+#image {
+  height: 135px;
+  width: 235px;
+}
+
+/* checkbox customizations */
+.checkbox{
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+}
 
 
 /*place special request on order for purchase*/
 .request{
-  padding:6px;
+  padding-right: 2px;
+
 }
 /*contains the logo, navigation and cart image*/
 .header{
@@ -116,10 +140,11 @@ a{
   width: 100%;
   padding-top: 20px;
 }
+
 /*container that holds the index and product detail image and contents*/
 .homepage {
   display:grid;
-  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-columns: 1fr 1fr 2fr;
   grid-column-gap:30px;
   width: 100%;
   padding-top: 10px;
@@ -128,23 +153,21 @@ a{
 
 .homepage2 {
   display:grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap:50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px;;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 30px;
 }
 
 .homepage3{
   display:grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap:50px;
   width: 100%;
   padding-top: 20px;
   padding-left: 30px;
-  background: red;
 }
 
 /*List of options to mark that would filter the products*/
@@ -185,9 +208,8 @@ a{
 /*styles for the text on site*/
 p{
   font-family: 'Raleway', sans-serif;
-  font-size: 15px;
+  font-size: 10px;
   font-style: normal;
-  font-kerning: auto;
 }
 
 /*end of page */
