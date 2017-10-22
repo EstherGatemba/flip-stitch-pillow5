@@ -5,6 +5,8 @@
     <title>Flip Stitch Pillow </title>
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- javascript -->
     <script src="main.js" type="text/javascript"></script>
     <!-- fonts -->
@@ -57,13 +59,17 @@
           </div>
 
           <!-- size selection -->
-          <select>
+          <select id="select-size">
             <option value="long">Long</option>
             <option value="round">Round</option>
-            <option value="square">Square</option><br>
+            <option value="square">Square</option>
+          </select>
+
+
+
 
             <!-- art selection --->
-
+            <select id="art-dropdown">
             <option value="bear">Bear</option>
             <option value="bunny">Bunny</option>
             <option value="dog">Dog</option>

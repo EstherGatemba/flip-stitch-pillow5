@@ -148,7 +148,7 @@ a{
 /*container that holds the index and product detail image and contents*/
 .homepage {
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap:30px;
   width: 100%;
   padding-top: 10px;
@@ -214,6 +214,10 @@ p{
   font-family: 'Raleway', sans-serif;
   font-size: 10px;
   font-style: normal;
+}
+
+.size-dropdown{
+
 }
 
 /*end of page */
