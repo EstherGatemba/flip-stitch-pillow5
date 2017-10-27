@@ -21,8 +21,28 @@ a{
 }
 
 /*Dropdown menu for art choices */
-.art{
+.selection{
 
+}
+
+#selectSize{
+  width: 233px;
+  margin-bottom: 25px;
+}
+
+#selectArt{
+  width: 233px;
+  margin-bottom: 25px;
+}
+
+#incdec{
+  width: 233px;
+  margin-bottom: 25px;
+}
+
+#target{
+  width: 233px;
+  margin-top: 25px;
 }
 
 /*add to cart button*/
@@ -40,9 +60,8 @@ a{
 
 }
 /*product images in cart*/
-#image {
-  height: 135px;
-  width: 235px;
+.selectImg {
+  width: 333px;
 }
 
 /* checkbox customizations */
@@ -155,11 +174,12 @@ a{
   padding-left: 30px;
 }
 
-.homepage2 {
+.shoppingCart {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap: 10px;;
+  grid-column-gap: 25px;
   width: 100%;
+  height: 50%;
   padding-top: 10px;
   padding-left: 30px;
 }
@@ -216,7 +236,7 @@ p{
   font-style: normal;
 }
 
-.select-size{
+.selectSize{
   border: 1px solid #ccc;
    width: 120px;
    border-radius: 3px;
@@ -225,19 +245,7 @@ p{
 
 }
 
-.select-size select{
-  padding: 5px 8px;
-    width: 130%;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-}
-
-.select-size select{
-  outline: none;
-
+.aboutus{
 }
 
 /*end of page */

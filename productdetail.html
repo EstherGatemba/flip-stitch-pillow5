@@ -37,11 +37,12 @@
         </div>
         <div class="productnotes">
           <article>
-            <h5 id="price">
-              $25.00<br></h5>
-              <h5 id="item-def">
+              <h5 id="itemDef">
+                Firm/Extra firm Couch Pillow
               </h5>
-              <p id="dog-couch"> Firm/Extra firm Couch Pillow<br>
+              <h5 id="price">
+                $25.00<br></h5>
+              <p id="dog-couch">
                 Machine washable<br>
                 Hypoallergenic<br>
                 *Available in long, round and square<br>
@@ -55,17 +56,13 @@
             </article>
             <form id="target" action="productdetail.html">
               <button id="submitbtn" onclick="myFunction()">Customize your pillow</button>
-              <!--input type="submit" action="onclick" value="Submit"-->
             </form>
-            <!--div class="request">
-            <input type="text" size="30" placeholder="Change outline from black to red">
-            <br>
-            <input type="submit" value="Submit">
-          </div-->
         </div>
 
         <!-- size selection -->
-        <select id="select-size">
+        <div class="selection">
+          <p> Select pillow size</p>
+        <select id="selectSize">
           <option value="select">- Select -</option>
           <option value="long">Long</option>
           <option value="round">Round</option>
@@ -73,15 +70,31 @@
         </select>
 
         <!-- art selection --->
-        <select id="select-art">
+        <p>Select pillow art</p>
+        <select id="selectArt">
           <option value="select">- Select -</option>
           <option value="bear">Bear</option>
           <option value="bunny">Bunny</option>
           <option value="dog">Dog</option>
         </select>
 
+        <p>Select quantity</p>
+        <select id="incdec">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
 
-        <a href="cart.html" class="addcart">Add to cart</a>
+        <a href="#" class="addcart" id="addCartProduct">Add to cart</a>
 
       </div>
       <!--- Link to the cart page from product detail information page -->
