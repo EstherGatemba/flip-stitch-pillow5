@@ -1,5 +1,6 @@
 /*** Object Constructors ***/
 function Pillow(itemDef, price, art, size, detail) {
+  this.image=image;
   this.itemDef=itemDef;
   this.price=price;
   this.art=art;
@@ -25,25 +26,42 @@ function myFunction() {
 $(document).ready(function(){
   console.log("document is ready");
 
-  //load array with information item from product detail page
+  //get items from storage and show on cart page
+  if (localStorage.length > 0)
+  {
+    var obj = localStorage.getItem('itemsArray');
 
+    //get image
+    var image = JSON.parse(obj)[0]['image'];
+    $("image").attr(image);
+
+
+  //get price
+    var itemPrice = JSON.parse(obj)[0]['selectedPrice'];
+    $("#price").text(itemPrice);
+
+    //get details
+    var itemDef = JSON.parse(obj)[0]['selectedItemDef'];
+    $("#itemDef").text(itemDef);
+};
 
 //change the image and text of the product based on size selection
 $("#selectSize").change (function(){
   if (this.value == "long") {
-    $("#square").attr("src","images/dog-long.jpg")
+    $("#image").attr("src","images/dog-long.jpg")
     $("#price").text("$40.00")
+
     $("#itemDef").text("Dog Bed Pillow -firm")
     console.log("page has loaded");
 
   }else if (this.value == "round") {
-    $("#square").attr("src","images/dog-round.jpg")
+    $("#image").attr("src","images/dog-round.jpg")
     $("#price").text("$25.00")
     $("#itemDef").text("Dog Couch Pillow")
     console.log("round has loaded");
 
   }else if (this.value == "square") {
-    $("#square").attr("src","images/dog2-square.jpg")
+    $("#image").attr("src","images/dog2-square.jpg")
     $("#price").text("$25.00")
     $("#itemDef").text("Dog Couch Pillow")
     console.log("square has loaded");
@@ -75,15 +93,15 @@ $("#selectArt").change (function(){
 
 //Trigger to add items to the cart
 $("#addCartProduct").click(function(){
+  var imageSelection=$("#image").attr();
   var selectSizeSelection=$("#select-size option:selected").val();
   var selectArtSelection=$("#selectArt option:selected").val();
-  var selectedincdec=$("incdec option:selected").val();
+  var selectedIncDec=$("incdec option:selected").val();
   var selectedPrice=$("#price").text();
-  //console.log("This is selectedPrice" + " " + selectedPrice);
-  var selecteditemDef=$("#itemDef").text();
+  var selectedItemDef=$("#itemDef").text();
 
   //New product with infor above
-  var selectedCartItem = {selectSizeSelection,selectArtSelection, selectedincdec, selectedPrice, selecteditemDef};
+  var selectedCartItem = {selectSizeSelection,selectArtSelection, selectedIncDec, selectedPrice, selectedItemDef};
 
   var addedItems = JSON.parse(localStorage.getItem('itemsArray')) || [];
 
@@ -97,7 +115,7 @@ $("#addCartProduct").click(function(){
 })
 
 $("button").click(function(){
-        $("p").remove();
+        $("itemDef","price").remove();
         console.log(removed);
       })
 
