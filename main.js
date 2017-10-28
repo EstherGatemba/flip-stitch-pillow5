@@ -20,6 +20,19 @@ function myFunction() {
         "Your specifications below were added to your order " + custom + "You can now add this item to the cart";
     }
 }
+function updateCart()
+{
+  var arr = JSON.parse(localStorage.getItem("itemsArray")) || [];
+  var x;
+  if(arr == [])
+    x="";
+  else {
+    x=arr.length;
+  }
+
+  document.getElementById("cartCount").innerHTML = x;
+
+}
 
 //Document load function
 
@@ -41,8 +54,9 @@ $(document).ready(function(){
       //get details
       var def = item1.selectedItemDef;
 
-
       $( "#mainpage-4" ).append( "<div class='shoppingCart'><img class='image' src="+image+"><div class='productnotes'><div id='detailhead'></div><div><p id='itemDef'>"+def+"</p></div><div id='Premocheck'><div id='price'><h6>"+price+"</h6></div><div id='"+[i]+"'><button type='button' value='remove'>Remove</button></div></div>" );
+
+      updateCart();
     }
 
 //change the image and text of the product based on size selection
@@ -61,7 +75,6 @@ $("#selectSize").change (function(){
     $("#productImg").attr("src","images/dog-round.jpg");
     $("#price").text("$25.00");
     $("#itemDef").text("Dog Couch Pillow");
-    //console.log("round roundroundroundroundroundroundround");
 
   }else if (this.value == "square") {
     $("#productImg").attr("src","images/dog-square.jpg");
@@ -81,15 +94,15 @@ $("#selectArt").change (function(){
     //console.log("bear has loaded");
 
   }else if (this.value == "bunny") {
-    $("#productImg").attr("src","images/bunny-square.jpg")
+    $("#productImg").attr("src","images/bunny2-square.jpg")
     $("#price").text("$35.00")
-    $("#itemDef").text("Dog Couch Pillow")
+    $("#itemDef").text("Bunny Couch Pillow")
     //console.log("Bunny has loaded");
 
   }else if (this.value == "dog") {
-    $("#productImg").attr("src","images/dog-square.jpg")
+    $("#productImg").attr("src","images/dog2-square.jpg")
     $("#price").text("$25.00")
-    $("#itemDef").text("Dog Couch Pillow")
+    $("#itemDef").text("Dog Bed Pillow")
     //console.log("dog has loaded");
   }
 })
@@ -110,7 +123,7 @@ $("#addCartProduct").click(function(){
 
   //add new product to the array
   addedItems.push(selectedCartItem);
-  //console.log(selectedCartItem)
+  //console.log(selectedCartItem);
 
   localStorage.setItem("itemsArray", JSON.stringify(addedItems));
 

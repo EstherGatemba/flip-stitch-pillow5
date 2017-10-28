@@ -9,6 +9,12 @@ a{
   color: inherit;
 }
 
+
+#cartCount{
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  display: inline;
+}
 /*shopping cart related css
 *All content in the cart page*/
 #mainpage-3 {
@@ -114,7 +120,7 @@ margin-bottom: 20px;
 /*contains the logo, navigation and cart image*/
 .header{
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr 1fr ;
   flex: 1 100%;
   text-align: left;
   border-bottom: 1px solid #d9d9d9;
@@ -146,7 +152,7 @@ margin-bottom: 20px;
 
 .buttonc{
   background-color:white;
-  padding: 3px 10px;
+  padding: 3px 0px 3px 10px;
   border-radius: 12px;
 }
 .button3:hover {
