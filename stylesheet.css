@@ -12,12 +12,16 @@ a{
 /*shopping cart related css
 *All content in the cart page*/
 #mainpage-3 {
-  /*display: grid;*/
+  display: grid;
   grid-template-columns: 100px 50px 100px;
   grid-template-rows: 80px auto 80px;
   grid-column-gap: 10px;
   grid-row-gap: 15px;
   margin-top: 30px;
+}
+
+#shoppingCart{
+
 }
 
 /*Dropdown menu for art choices */
@@ -60,12 +64,28 @@ a{
 
 }
 
+.checkout{
+  display: grid;
+  font-family: 'Raleway',sans-serif;
+  padding-top: 8px;
+  text-align: center;
+  border-radius: 5px;
+  height: 15px;
+  width: 100px;
+  line-height: 10px;
+  background-color: #B92808;
+  color: white;
+  margin-left: 550px;
+
+}
+
 /*remove button */
 #remove{
 display: grid;
 font-family: 'Raleway',sans-serif;
 padding-top: 2px;
-padding-bottom: 2px;
+padding-bottom:
+2px;
 text-align: center;
 border-radius: 5px;
 width: 100px;
@@ -197,13 +217,14 @@ margin-bottom: 20px;
   height: 50%;
   padding-top: 10px;
   padding-left: 30px;
+  margin-top: 120px;
 }
 
 
 .homepage3{
   display:grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  /*grid-template-rows: 1fr 1fr 1fr;*/
   grid-column-gap:50px;
   width: 100%;
   padding-top: 20px;
@@ -261,17 +282,15 @@ p{
 
 }
 
-.aboutus{
-}
-
 /*end of page */
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 5fr;
+  grid-template-rows: 1fr 1fr;
   flex: 1 100%;
   height: 30px;
   width:90%;
-  padding-top: 100px;
+  padding-top: 40px;
   padding-right: 10px;
   text-align: right;
   opacity:1;
@@ -280,6 +299,7 @@ p{
 .footer1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 5fr;
+  grid-template-rows: 1fr 1fr;
   flex: 1 100%;
   height: 30px;
   width:110%;
@@ -291,10 +311,10 @@ p{
 
 .footercontent{
   font-family: 'Raleway', sans-serif;
-  text-align: right;
+  text-align: left;
   display: grid;
-  grid-template-columns: 6fr;
-  padding-left: 60px;
+  grid-template-columns: 4fr;
+  padding-left: 100px;
   width:100%;
 }
 
@@ -303,6 +323,7 @@ p{
   text-align: left;
   display: grid;
   grid-template-columns: 4fr;
+  grid-template-rows: 1fr 1fr;
   padding-left: 100px;
   width:100%;
 }
@@ -314,10 +335,30 @@ p{
   grid-template-columns: 4fr;
   padding-left: 100px;
   width:100%;
+
+}
+
+.footercontent3{
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  margin-top: 300px;
+  display: grid;
+  grid-template-columns: 4fr;
+  grid-template-rows: 1fr 1fr;
+  padding-left: 100px;
+  width:2000%;
 }
 
 .socialmedia{
   border-right-width: 20px;
-  padding-top: 10px;
+  padding: 10px;
+}
+
+
+.socialmedia1{
+  border-right-width: 20px;
+  padding: 30px;
+  margin-top: 300px;
+  padding-left: 60px;
 }
 /*footer text*/

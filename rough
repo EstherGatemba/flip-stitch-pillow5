@@ -1,0 +1,36 @@
+<div class="shoppingCart">
+  <!--- Adding the select product image -->
+  <img class="image" src="images/dog-square.jpg">
+
+  <!--- Adding the product detail for the select product-->
+  <div class="productnotes">
+    <!-- product head detial-->
+    <div id="detailhead">
+      <h6>Product Detail</h6>
+    </div>
+
+    <!--- product details -->
+    <div>
+      <p id="itemDef"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+
+    <!--- Price, remove item, checkout -->
+    <div id="Premocheck">
+      <!-- price of product in cart -->
+      <div id="price">
+        <h6> $25.00</h6>
+      </div>
+
+      <!--- remove item from cart --->
+      <div id="remove">
+        <button type="button" value="remove">Remove</button>
+      </div>
+
+      <!--- checkout button --->
+      <a href="#" class="addcart">Checkout</a>
+
+    </div>

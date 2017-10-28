@@ -24,47 +24,50 @@ function myFunction() {
 //Document load function
 
 $(document).ready(function(){
-  console.log("document is ready");
-
+  //console.log("document is ready");
   //get items from storage and show on cart page
-  if (localStorage.length > 0)
-  {
-    var obj = localStorage.getItem('itemsArray');
+    var objectRetreive = JSON.parse(localStorage.getItem('itemsArray'))|| [];
 
-    //get image
-    var image = JSON.parse(obj)[0]['image'];
-    $("image").attr(image);
+    console.log("This is obj" + " " + localStorage.getItem('itemsArray'));
+
+    for (var i = 0; i<objectRetreive.length; i++){
+      var item1 = JSON.parse(localStorage.getItem('itemsArray'))[i];
+      //get image
+      var image =item1.imageSelection;
+
+    //get price
+      var price = item1.selectedPrice;
+
+      //get details
+      var def = item1.selectedItemDef;
 
 
-  //get price
-    var itemPrice = JSON.parse(obj)[0]['selectedPrice'];
-    $("#price").text(itemPrice);
-
-    //get details
-    var itemDef = JSON.parse(obj)[0]['selectedItemDef'];
-    $("#itemDef").text(itemDef);
-};
+      $( "#mainpage-4" ).append( "<div class='shoppingCart'><img class='image' src="+image+"><div class='productnotes'><div id='detailhead'></div><div><p id='itemDef'>"+def+"</p></div><div id='Premocheck'><div id='price'><h6>"+price+"</h6></div><div id='"+[i]+"'><button type='button' value='remove'>Remove</button></div></div>" );
+    }
 
 //change the image and text of the product based on size selection
 $("#selectSize").change (function(){
   if (this.value == "long") {
-    $("#image").attr("src","images/dog-long.jpg")
-    $("#price").text("$40.00")
+    $("#productImg").attr('src','images/dog-long.jpg');
+    //console.log("dog-longlonglonglonglonglonglonglonglonglonglonglonglonglong");
+    $("#price").text("$40.00");
 
-    $("#itemDef").text("Dog Bed Pillow -firm")
-    console.log("page has loaded");
+    $("#itemDef").text("Dog Bed Pillow -firm");
+
+
+    //$('#id').attr('src', 'newImage.jpg');
 
   }else if (this.value == "round") {
-    $("#image").attr("src","images/dog-round.jpg")
-    $("#price").text("$25.00")
-    $("#itemDef").text("Dog Couch Pillow")
-    console.log("round has loaded");
+    $("#productImg").attr("src","images/dog-round.jpg");
+    $("#price").text("$25.00");
+    $("#itemDef").text("Dog Couch Pillow");
+    //console.log("round roundroundroundroundroundroundround");
 
   }else if (this.value == "square") {
-    $("#image").attr("src","images/dog2-square.jpg")
-    $("#price").text("$25.00")
-    $("#itemDef").text("Dog Couch Pillow")
-    console.log("square has loaded");
+    $("#productImg").attr("src","images/dog-square.jpg");
+    $("#price").text("$25.00");
+    $("#itemDef").text("Dog Couch Pillow");
+    //console.log("square has loaded");
 
   }
 })
@@ -72,36 +75,36 @@ $("#selectSize").change (function(){
 //change the image and text of the product based on the artwork on the pillow
 $("#selectArt").change (function(){
   if (this.value == "bear") {
-    $("#square").attr("src","images/bear.jpg")
-    $("#price").text("$25.00")
+    $("#productImg").attr("src","images/bear.jpg")
+    $("#price").text("$15.00")
     $("#itemDef").text("Bear Couch Pillow")
-    console.log("bear has loaded");
+    //console.log("bear has loaded");
 
   }else if (this.value == "bunny") {
-    $("#square").attr("src","images/bunny-square.jpg")
-    $("#price").text("$25.00")
+    $("#productImg").attr("src","images/bunny-square.jpg")
+    $("#price").text("$35.00")
     $("#itemDef").text("Dog Couch Pillow")
-    console.log("Bunny has loaded");
+    //console.log("Bunny has loaded");
 
   }else if (this.value == "dog") {
-    $("#square").attr("src","images/dog-square.jpg")
+    $("#productImg").attr("src","images/dog-square.jpg")
     $("#price").text("$25.00")
     $("#itemDef").text("Dog Couch Pillow")
-    console.log("dog has loaded");
+    //console.log("dog has loaded");
   }
 })
 
 //Trigger to add items to the cart
 $("#addCartProduct").click(function(){
-  var imageSelection=$("#image").attr();
+  var imageSelection=$("#productImg").attr('src');
   var selectSizeSelection=$("#select-size option:selected").val();
   var selectArtSelection=$("#selectArt option:selected").val();
-  var selectedIncDec=$("incdec option:selected").val();
+  var selectedIncDec=$("#incdec option:selected").val();
   var selectedPrice=$("#price").text();
   var selectedItemDef=$("#itemDef").text();
 
   //New product with infor above
-  var selectedCartItem = {selectSizeSelection,selectArtSelection, selectedIncDec, selectedPrice, selectedItemDef};
+  var selectedCartItem = {imageSelection, selectSizeSelection,selectArtSelection, selectedIncDec, selectedPrice, selectedItemDef};
 
   var addedItems = JSON.parse(localStorage.getItem('itemsArray')) || [];
 
@@ -111,13 +114,18 @@ $("#addCartProduct").click(function(){
 
   localStorage.setItem("itemsArray", JSON.stringify(addedItems));
 
-  console.log("This is itemsArray" + " " + JSON.stringify(addedItems));
+  console.log("This is itemsArray" + " " + localStorage.getItem('itemsArray'));
 })
 
-$("button").click(function(){
-        $("itemDef","price").remove();
-        console.log(removed);
-      })
 
+$("button").click(function(){
+  var addedItems = JSON.parse(localStorage.getItem('itemsArray')) || [];
+  var j = $(this).attr("id");
+  console.log(j);
+  addedItems.splice(j,1);
+  localStorage.setItem("itemsArray", JSON.stringify(addedItems));
+    location.reload();
+        console.log("removed");
+      })
 
 })
